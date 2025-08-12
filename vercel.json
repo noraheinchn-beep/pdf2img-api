@@ -1,16 +1,6 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/index.py", "use": "@vercel/python@3.9.0" }
-  ],
-  "functions": {
-    "api/index.py": {
-      "maxDuration": 60,
-      "memory": 1024
-    }
-  },
-  "routes": [
-    { "src": "/api/health", "dest": "/api/index/health" },
-    { "src": "/api/render", "dest": "/api/index/render" }
+    { "src": "api/index.py", "use": "@vercel/python@3.11.0" }
   ]
 }
