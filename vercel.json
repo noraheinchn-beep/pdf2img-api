@@ -5,9 +5,3 @@
       "maxDuration": 60,
       "memory": 1024
     }
-  },
-  "routes": [
-    { "src": "/api/health", "dest": "/api/index/health" },
-    { "src": "/api/render", "dest": "/api/index/render" }
-  ]
-}
