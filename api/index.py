@@ -1,7 +1,8 @@
 from fastapi import FastAPI
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import PlainTextResponse, JSONResponse
 
-app = FastAPI()
+# 关键：告诉 FastAPI，网关前缀是 /api/index
+app = FastAPI(root_path="/api/index")
 
 @app.get("/")
 def root():
@@ -9,4 +10,4 @@ def root():
 
 @app.get("/health")
 def health():
-    return {"ok": True}
+    return JSONResponse({"ok": True})
